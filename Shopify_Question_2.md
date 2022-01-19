@@ -28,11 +28,11 @@ Answer: Peacock
 
 ```
 SELECT ProductName AS TopProductInGermany 
-FROM (SELECT ProductName, SUM(Quantity) AS Total
+FROM (SELECT ProductName
 FROM Orders AS o, OrderDetails AS od, Customers AS c, Products AS p
 WHERE c.Country = 'Germany' AND od.OrderID = o.OrderID AND od.ProductID = p.ProductID AND c.CustomerID = o.CustomerID
 GROUP BY p.ProductID
-ORDER BY Total DESC
+ORDER BY SUM(Quantity) DESC
 LIMIT 1)
 ```
 
