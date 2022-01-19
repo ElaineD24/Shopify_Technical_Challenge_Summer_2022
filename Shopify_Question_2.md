@@ -34,7 +34,7 @@ WHERE c.Country = 'Germany' AND od.OrderID = o.OrderID AND od.ProductID = p.Prod
 GROUP BY p.ProductID
 ORDER BY Total DESC
 LIMIT 1)
-'''
+```
 
 Answer: Boston Crab Meat
 
