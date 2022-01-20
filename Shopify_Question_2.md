@@ -3,7 +3,7 @@
 ## a)
 
 ```
-SELECT COUNT(*) AS OrderBySpeedyExpress
+SELECT COUNT(*) AS NumOrderBySpeedyExpress
 From Orders
 INNER JOIN Shippers
 ON Orders.ShipperID = Shippers.ShipperID
